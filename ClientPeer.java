@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class ClientPeer extends Thread {
 
-    private String username;
+    public String username;
     private ObjectOutputStream oos;
     public ObjectInputStream ois;
     

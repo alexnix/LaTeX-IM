@@ -115,7 +115,6 @@ public class GuiClient {
                 } else {
                     user = name;
                     connect();
-                    listen();
                 }
             }
         
@@ -148,8 +147,12 @@ public class GuiClient {
             
             Socket s = new Socket(IP, PORT);
             this.listening = null;
-            client = null;
-            client = new ClientPeer( user, s );
+            if( client == null){
+                client = new ClientPeer( user, s );
+                listen();
+            }
+            else 
+                client.username = user;
             //client.start();
             chatTextarea.append("You are now connected as "+user+".\n");
         } catch (Exception e) {
