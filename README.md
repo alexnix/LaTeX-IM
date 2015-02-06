@@ -1,7 +1,15 @@
+To compile this one will need to download JLaTeXMath jar from
+
+http://forge.scilab.org/index.php/p/jlatexmath/downloads/693/
+
 To run the server use
+```
 java Server
+```
 To run the client user
+```
 java GuiClient
+```
 
 Once connected you can send
 
